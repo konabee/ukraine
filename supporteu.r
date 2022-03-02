@@ -28,13 +28,13 @@ pal2<-append(pal,c('yellow'),after=length(pal)) ## use a different scheme for mi
 tiff(file="rplot.jpg",
      width=8, height=8, units="in", res=500)
 par(mfrow=c(2,2)) 
-table(dat2$cntry,dat2$euftf) %>% prop.table(1) %>% round(2) %>% plot(col=pal2, main='EU gone too far or not far enough?',
+table(dat2$cntry,dat2$euftf) %>% prop.table(1) %>% plot(col=pal2, main='EU gone too far or not far enough?',
                                                                     xlab='0=already gone too far; 10=should go farther, 99=missing')
-table(dat2$cntry,dat2$dmcntov) %>% prop.table(1) %>% round(2) %>% plot(col=pal2,main='How democratic is your country?',
+table(dat2$cntry,dat2$dmcntov) %>% prop.table(1) %>% plot(col=pal2,main='How democratic is your country?',
                                                                       xlab='0=not at all; 10=completely, 99=missing')
-table(dat2$cntry,dat2$implvdm) %>% prop.table(1) %>% round(2) %>% plot(col=pal2,main='How important is it to live in a democracy?',
+table(dat2$cntry,dat2$implvdm) %>% prop.table(1) %>% plot(col=pal2,main='How important is it to live in a democracy?',
                                                                        xlab='0=not at all; 10=extremely important, 99=missing')
-table(dat2$cntry,dat2$stfgov) %>% prop.table(1) %>% round(2) %>% plot(col=pal2,main='Satisfaction with government',
+table(dat2$cntry,dat2$stfgov) %>% prop.table(1) %>% plot(col=pal2,main='Satisfaction with government',
                                                                        xlab='0=extremely dissatisfied; 10=extremely satisfied, 99=missing')
 dev.off()
 
