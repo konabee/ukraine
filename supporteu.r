@@ -2,11 +2,9 @@
 
 library(essurvey)
 set_email("liu@demogr.mpg.de")
-dat <- import_rounds(6, format = 'spss') %>% filter(cntry %in% c('UA','PL','RU','HU')) %>% 
-  select(cntry, yrbrn, gndr, marsts, chldhm, edulvlb, eduyrs, emplrel, implvdm, dmcntov, euftf,stfgov)
-table(dat$cntry)
 
-visdat::vis_miss(dat) ## marital status half missing 
+dat <- import_rounds(6, format = 'spss') %>% filter(cntry %in% c('UA','PL','RU','HU')) %>% 
+  select(cntry, yrbrn, gndr, eduyrs, implvdm, dmcntov, euftf,stfgov)
 
 dat2<-dat %>% zap_labels() %>% 
   mutate_all(~replace(., is.na(.),99)) %>%
