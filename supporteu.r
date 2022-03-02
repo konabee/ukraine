@@ -1,3 +1,5 @@
+## written by Chia Liu, March 2, 2022 ## 
+
 library(essurvey)
 set_email("liu@demogr.mpg.de")
 dat <- import_rounds(6, format = 'spss') %>% filter(cntry %in% c('UA','PL','RU','HU')) %>% 
