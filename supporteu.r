@@ -66,5 +66,5 @@ dwplot(list(m1,m2,m3),
       yrbrn1998='Cohort 1981-1998',
       eduyrs = "Yrs of education (ref:0)"
     ))+
-  ggtitle("Support for EU (Hungary as reference)") +
+  ggtitle("Support for EU") +
   theme_pubr()
